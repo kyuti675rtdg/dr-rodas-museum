@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Rodas Museum — Dr. Rodas Foundation</title>
+<meta name="description" content="Dr. Rodas Museum Project — Discovering Ethiopia's Intellectual Heritage. Preserving Knowledge for the Future. A donation-first museum fundraising site for Dr. Rodas Foundation, drrodas.org.">
+<style>
+:root{--navy:#0B1239;--navy2:#141c52;--gold:#A77C2C;--gold2:#c49a4a;--paper:#FDFCFA;--ivory:#F5F0E6;--ink:#1c1e2a;--muted:#5d6070;--line:#e8e0cd;--radius:18px}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,'Times New Roman',serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(253,252,250,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;height:72px;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.brand small{display:block;font-weight:600;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.navlinks{display:flex;gap:20px;font-weight:600;font-size:14px}@media(max-width:820px){.navlinks{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;border:0;font-weight:800;cursor:pointer;font-family:inherit}.btn-gold{background:var(--gold);color:#fff}.btn-navy{background:var(--navy);color:#fff}.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.hero{background:linear-gradient(150deg,var(--navy),var(--navy2) 60%,#232a63);color:#fff;padding:64px 0}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}@media(max-width:880px){.hero-grid{grid-template-columns:1fr}}
+.goldrule{width:64px;height:3px;background:var(--gold);margin-bottom:18px}
+.hero h1{font-size:50px;line-height:1.02;letter-spacing:-.01em;margin:8px 0 14px;font-weight:600}@media(max-width:600px){.hero h1{font-size:36px}}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800;color:var(--gold2)}
+.lead{font-size:17px;line-height:1.65;opacity:.94}.amharic{font-size:18px;opacity:.9;margin-top:6px}
+.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.trust span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700}
+.donate{background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.3);border-top:4px solid var(--gold)}
+.toggle{display:grid;grid-template-columns:1fr 1fr;background:var(--ivory);border-radius:999px;padding:4px}.toggle button{border:0;background:transparent;padding:10px;border-radius:999px;font-weight:800;cursor:pointer;font-family:inherit}.toggle button.active{background:var(--navy);color:#fff}
+.amounts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.amounts button{padding:14px;border:1px solid var(--line);background:#fff;border-radius:12px;font-weight:800;cursor:pointer;font-family:inherit}.amounts button.active{border-color:var(--gold);background:#fbf6e9;color:var(--navy)}
+select,input[type=email],input[type=text]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-family:inherit}
+.impact-line{background:#fbf6e9;border:1px solid #e8d9ae;padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.5}
+section{padding:64px 0}.h2{font-size:36px;margin:0 0 12px;font-weight:600;color:var(--navy)}.sub{color:var(--muted);line-height:1.7;max-width:740px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}@media(max-width:880px){.grid4{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid4{grid-template-columns:1fr}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}@media(max-width:880px){.grid3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}.card h3{margin:10px 0 8px;color:var(--navy)}.card p{color:var(--muted);line-height:1.6;margin:0}
+.icon{width:46px;height:46px;border-radius:12px;background:var(--ivory);display:grid;place-items:center;font-size:20px;color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;margin-top:24px}@media(max-width:700px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px}.stat b{font-size:38px;display:block;font-family:Fraunces,Georgia,serif}.stat span{text-transform:uppercase;letter-spacing:.12em;font-size:11px;opacity:.85}
+.badge{display:inline-block;background:var(--ivory);color:var(--gold);padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid var(--line)}
+footer{background:var(--navy);color:#cfd3ea;padding:44px 0}.note{font-size:13px;color:var(--muted);line-height:1.6}
+.success{display:none;background:#eafaf0;border:1px solid #9ed9ae;padding:14px;border-radius:12px;margin-top:14px;line-height:1.5;color:var(--ink)}
+</style></head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#"><img src="logo.png" alt="Dr. Rodas Foundation official logo"><span>Dr. Rodas Museum<small>Dr. Rodas Foundation · drrodas.org</small></span></a><nav class="navlinks"><a href="#why">Why the Museum</a><a href="#proof">Transparency</a><a href="#areas">Exhibition Areas</a><a href="#act">Ways to Support</a></nav><a class="btn btn-gold" href="#donate">Donate Now</a></div></header>
+
+<div class="hero"><div class="wrap hero-grid">
+<div><div class="goldrule"></div><div class="eyebrow">Dr. Rodas Museum Project</div><h1>Preserving Heritage. Advancing Knowledge. Inspiring Generations.</h1><div class="amharic">ዶክተር ሮዳስ ፋውንዴሽን</div><p class="lead">Discovering Ethiopia's Intellectual Heritage — Preserving Knowledge for the Future. The Dr. Rodas Museum Project is envisioned as a centre for preserving, studying, and presenting Ethiopia's manuscripts, languages, astronomy, and intellectual traditions.</p><p class="lead">Your contribution can help advance research, preserve valuable knowledge, support educational initiatives, and develop the Museum Project.</p><div class="trust"><span>Transparent fundraising</span><span>Confirmed donations only</span><span>support@drrodas.org</span></div><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-gold" href="#donate">Donate to the Museum Project</a><a class="btn btn-ghost" href="#areas">Explore the Museum</a></div></div>
+
+<div class="donate" id="donate"><div class="toggle"><button id="tMonthly" class="active" onclick="setFreq('monthly')">Give monthly</button><button id="tOnce" onclick="setFreq('once')">Give once</button></div>
+<div class="amounts" id="amounts"></div>
+<label style="font-size:13px;font-weight:700">Custom amount (USD)</label><input type="text" id="custom" placeholder="$100" oninput="customAmount(this.value)">
+<label style="font-size:13px;font-weight:700;display:block;margin-top:14px">Direct my gift to</label>
+<select id="designation" onchange="updateLine()"><option>Museum Project — where most needed</option><option>Ge'ez Language &amp; Manuscript Heritage</option><option>Gematria &amp; Numerical Traditions</option><option>Ethiopian Astronomy &amp; Cosmology</option><option>Ethiopian History &amp; Intellectual Traditions</option><option>Research, Archives &amp; Digital Preservation</option><option>Education &amp; Interactive Learning</option><option>Foundation programs — where most needed</option></select>
+<div class="impact-line" id="impactLine" style="margin-top:14px"></div>
+<button class="btn btn-gold" style="width:100%;margin-top:14px" onclick="donate()">Donate now</button>
+<div class="success" id="success"></div><p class="note" style="margin-top:10px">Preview mode — payments are not yet enabled and no payment is taken here. On the live foundation site, progress counts confirmed donations only, after merchant verification.</p></div>
+</div></div>
+
+<section id="why"><div class="wrap"><div class="eyebrow">Why the museum?</div><h2 class="h2">Because heritage preserved is a future built</h2><p class="sub">Ethiopia has a rich and diverse heritage of languages, manuscripts, scholarship, and historical knowledge. Preserving it helps future generations understand their history — and lets researchers and wider audiences engage with these resources.</p>
+<div class="grid4">
+<div class="card"><div class="icon">✦</div><h3>Preservation</h3><p>Document and protect manuscripts, historical records, and cultural knowledge before they are lost.</p></div>
+<div class="card"><div class="icon">❧</div><h3>Research</h3><p>Support the study of Ethiopian history, languages, philosophy, astronomy, and numerical traditions.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Education</h3><p>Build learning programs and resources for students, educators, families, and visitors.</p></div>
+<div class="card"><div class="icon">◎</div><h3>Digital access</h3><p>Use responsible digital technology — archives and online resources — to open heritage to the world.</p></div>
+</div></div></section>
+
+<section id="proof" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap"><h2 class="h2">Know your donation is making a difference</h2><p class="sub">Every approved funding category carries a transparent target, verified donations received, the remaining amount, and a progress indicator. Progress counts confirmed donations only.</p>
+<div class="grid3"><div class="card"><span class="badge">Step 1</span><h3>You give</h3><p>Choose the Museum Project or one of the six exhibition and research areas.</p></div><div class="card"><span class="badge">Step 2</span><h3>The foundation verifies</h3><p>Each contribution is handled securely, confirmed, and reported transparently.</p></div><div class="card"><span class="badge">Step 3</span><h3>You see the progress</h3><p>Category-level progress and published milestones show what your gift made possible.</p></div></div>
+<div class="stats"><div class="stat"><b data-count="6">0</b><span>Exhibition &amp; research areas</span></div><div class="stat"><b data-count="6">0</b><span>Foundation programs</span></div><div class="stat"><b data-count="7">0</b><span>Core objectives</span></div></div><p class="note" style="margin-top:10px">These are the foundation's official published counts — no fundraising totals are shown until they are confirmed by the foundation.</p></div></section>
+
+<section id="areas"><div class="wrap"><div class="eyebrow">The Museum Project</div><h2 class="h2">Six areas of exploration</h2><p class="sub">The proposed exhibition and research areas, as published by the foundation. All stages are currently Planned — official timelines and milestones will be published when confirmed.</p>
+<div class="grid3" id="areaCards"></div>
+<div class="card" style="margin-top:16px"><h3>What your donation can support</h3><p>Museum infrastructure and essential facilities · Exhibition planning and development · Manuscript preservation and documentation · Digital archives and preservation technology · Research and educational facilities · Learning programs and public engagement · Museum equipment and visitor experiences.</p></div></div></section>
+
+<section id="act" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap"><h2 class="h2">Ready to help bring the museum to life?</h2><p class="sub">Eight ways to support — the same action structure as the model site, rebuilt for the foundation.</p>
+<div class="grid4" id="actions"></div></div></section>
+
+<section><div class="wrap card" style="display:grid;grid-template-columns:1fr 1fr;gap:20px"><div><h2 class="h2" style="font-size:28px">Stay close to the story</h2><p class="sub">Receive museum milestones, publications, and progress reports by email.</p></div><div><label style="font-size:13px;font-weight:700">Email address</label><input type="email" id="newsEmail" placeholder="you@example.com"><button class="btn btn-navy" style="width:100%;margin-top:10px" onclick="subscribe()">Subscribe</button><div class="success" id="newsOk"></div></div></div></section>
+
+<footer><div class="wrap"><div style="display:flex;gap:14px;align-items:center"><img src="logo.png" alt="Dr. Rodas Foundation logo" style="width:52px;height:52px;border-radius:50%"><b style="color:#fff;font-family:Fraunces,Georgia,serif;font-size:20px">Dr. Rodas Foundation</b></div><p style="line-height:1.7;opacity:.85;max-width:760px">Dr. Rodas Museum Project — a major initiative of Dr. Rodas Foundation, dedicated to preserving, documenting, researching, and sharing Ethiopian intellectual, historical, and cultural heritage.</p><p style="opacity:.85">Website: drrodas.org · Email: support@drrodas.org</p><p style="opacity:.6;font-size:13px;line-height:1.6">New donation-first design built 23 Oct 2026 from the clean-water fundraising clone structure, rebranded with the foundation's official name, logo, navy #0B1239 / gold #A77C2C / ivory identity, and official published content. This is a separate new site — it does not replace the existing dr-rodas-foundation site. Payments disabled in preview.</p></div></footer>
+
+<script>
+let freq='monthly', amount=100;
+const amounts=[20,40,100,250,500,1000];
+function renderAmounts(){document.getElementById('amounts').innerHTML=amounts.map(a=>`<button class="${a===amount?'active':''}" onclick="setAmount(${a})">$${a}</button>`).join('');updateLine()}
+function setAmount(a){amount=a;document.getElementById('custom').value='';renderAmounts()}
+function customAmount(v){const n=parseFloat(v.replace(/[^0-9.]/g,''));if(n>0){amount=n;document.querySelectorAll('#amounts button').forEach(b=>b.classList.remove('active'));updateLine()}}
+function setFreq(f){freq=f;document.getElementById('tMonthly').classList.toggle('active',f==='monthly');document.getElementById('tOnce').classList.toggle('active',f==='once');updateLine()}
+function updateLine(){const d=document.getElementById('designation').value;document.getElementById('impactLine').innerHTML=`<b>$${amount} ${freq==='monthly'?'every month':''}</b> directed to <b>${d}</b> — helping preserve Ethiopia's intellectual heritage for future generations.`}
+function donate(){const ref='DRF-2026-'+Math.random().toString(36).slice(2,8).toUpperCase();const s=document.getElementById('success');s.style.display='block';s.innerHTML=`<b>Thank you — preview donation recorded as PENDING.</b><br>Amount: $${amount} (${freq}) · ${document.getElementById('designation').value}<br>Reference: ${ref}<br>No payment was taken. It would count toward progress only once confirmed.`}
+function subscribe(){const e=document.getElementById('newsEmail').value;if(!e.includes('@')){alert('Please enter a valid email');return}const s=document.getElementById('newsOk');s.style.display='block';s.textContent='Subscribed (preview): '+e}
+const areas=[["Ge'ez Language & Manuscript Heritage","The Ge'ez language, script, historical manuscripts, and literary traditions at the heart of Ethiopian scholarship."],["Gematria & Numerical Traditions","Numerical values associated with letters and traditional numerical systems — documented evidence distinguished from interpretation."],["Ethiopian Astronomy & Cosmology","Calendars, timekeeping, and observations of the Sun, Moon, and stars, presented in their cultural context."],["Ethiopian History & Intellectual Traditions","Historical records, scholarship, and the people and traditions behind Ethiopia's intellectual legacy."],["Research, Archives & Digital Preservation","Responsible documentation, digitisation, and preservation of manuscripts and historical records."],["Education & Interactive Learning","Exhibitions, guided learning, digital displays, and workshops for students, families, and visitors."]];
+document.getElementById('areaCards').innerHTML=areas.map((a,i)=>`<div class="card"><span class="badge">Area ${i+1} · Planned</span><h3>${a[0]}</h3><p>${a[1]}</p><p style="margin-top:14px"><a class="btn btn-ghost" href="#donate" onclick="pickArea(${i})">Support this area</a></p></div>`).join('');
+function pickArea(i){document.getElementById('designation').selectedIndex=i+1;updateLine()}
+const actions=[['Give monthly','Provide steady support for preservation, research, and education all year.','Join today'],['Sponsor an exhibition area','Help fund one of the six museum areas from planning to opening.','Sponsor now'],['Start a fundraiser','Turn an event, celebration, or campaign into heritage preserved.','Get started'],['Support a program','Give to Research, Education, Publications, or Digital Innovation.','Browse programs'],['Legacy giving','Include the foundation in your long-term giving plans.','Learn more'],['Partner with us','Universities, cultural institutions, and companies can collaborate.','Partner with us'],['Give in honour','Dedicate a gift to a scholar, teacher, or someone special.','Give today'],['Share the story','Introduce the Museum Project to your community and network.','Get inspired']];
+document.getElementById('actions').innerHTML=actions.map(a=>`<div class="card"><h3>${a[0]}</h3><p>${a[1]}</p><p style="margin-top:14px"><a class="btn btn-ghost" href="#donate">${a[2]}</a></p></div>`).join('');
+renderAmounts();
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,target=+el.dataset.count;let cur=0;const t=setInterval(()=>{cur++;if(cur>=target){cur=target;clearInterval(t)}el.textContent=cur},90);io.unobserve(el)}})},{threshold:.4});document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+</script></body></html>
